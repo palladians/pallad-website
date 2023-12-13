@@ -29,7 +29,7 @@ export function Header() {
       <header className="border-b border-slate-200 bg-white/75 backdrop-blur-lg">
         <div className="container mx-auto flex h-16 items-center px-5 sm:px-8">
           <Link href="/" className="flex items-center space-x-2">
-            <Image src={IconHref} alt="Pallad logo" width={28} height={36} />
+            <Image src={IconHref} alt="Pallad logo" width={28} />
             <span className="font-bold text-slate-900">Pallad</span>
           </Link>
           <nav className="ml-10">

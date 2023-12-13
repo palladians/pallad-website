@@ -43,7 +43,7 @@ export function Footer() {
         <ul className="flex justify-center space-x-6 sm:space-x-8">
           {socials.map((item) => (
             <li key={item.label}>
-              <a href={item.href} target="_blank" rel="noreferrer" className="">
+              <a href={item.href} target="_blank" rel="noreferrer">
                 <item.Icon className="h-6 w-6" />
                 <span className="sr-only">{item.label}</span>
               </a>

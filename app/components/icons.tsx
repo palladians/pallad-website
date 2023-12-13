@@ -7,9 +7,9 @@ export function IconArrowLeftRight(props: SVGProps<SVGSVGElement>) {
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M8 3L4 7l4 4M4 7h16m-4 14l4-4l-4-4m4 4H4"
       ></path>
     </svg>
@@ -22,9 +22,9 @@ export function IconCoins(props: SVGProps<SVGSVGElement>) {
       <g
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
       >
         <circle cx="8" cy="8" r="6"></circle>
         <path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4"></path>
@@ -40,9 +40,9 @@ export function IconPointerClick(props: SVGProps<SVGSVGElement>) {
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="m9 9l5 12l1.8-5.2L21 14ZM7.2 2.2L8 5.1M5.1 8l-2.9-.8M14 4.1L12 6m-6 6l-1.9 2"
       ></path>
     </svg>
