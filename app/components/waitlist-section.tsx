@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent } from 'react'
+import { FormEvent, useState } from 'react'
 
 import { addEmailToWaitlist } from '@/app/lib/actions'
 
@@ -11,6 +11,8 @@ function Circle({ className }: { className: string }) {
 }
 
 export function WaitlistSection() {
+  const [pending, setPending] = useState(false)
+
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
@@ -18,7 +20,10 @@ export function WaitlistSection() {
     const email = String(formData.get('email') || '').trim()
     const name = String(formData.get('name') || '').trim()
 
+    setPending(true)
     const { message } = await addEmailToWaitlist({ email, name })
+    setPending(false)
+
     alert(message)
   }
 
@@ -43,7 +48,8 @@ export function WaitlistSection() {
             <input type="hidden" name="name" />
             <button
               type="submit"
-              className="whitespace-nowrap rounded-md bg-slate-800 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-700"
+              className="whitespace-nowrap rounded-md bg-slate-800 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-700 disabled:cursor-not-allowed"
+              disabled={pending}
             >
               Join Waitlist
             </button>
