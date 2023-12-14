@@ -9,6 +9,7 @@ export function HeroSection() {
       <Image
         src={HeroHref}
         alt="An abstract painting of mountains and a blue sky, capturing the beauty of nature in vibrant colors."
+        priority={true}
         className="absolute left-0 top-0 h-full w-full mix-blend-soft-light"
       />
       <div className="relative z-10 mx-auto max-w-2xl px-5 py-32 text-center leading-8 sm:px-8">
