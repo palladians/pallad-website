@@ -2,7 +2,8 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { cookies } from 'next/headers'
+
+import { Providers } from '@/components/providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,12 +13,10 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const isThemeDark = cookies().get('theme')?.value === 'dark'
-
   return (
-    <html lang="en" className={`scroll-smooth ${isThemeDark ? 'dark' : 'light'}`}>
-      <body className={`${inter.className} bg-white antialiased dark:bg-slate-950`}>
-        {children}
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.className} antialiased`}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

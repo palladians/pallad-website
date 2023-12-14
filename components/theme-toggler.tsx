@@ -1,23 +1,35 @@
-import { cookies } from 'next/headers'
+'use client'
+
+import { useTheme } from 'next-themes'
+import { useLayoutEffect, useState } from 'react'
 
 import { IconMoonStar, IconSunDim } from '@/components/icons'
 
-export function ThemeToggler() {
-  const isThemeDark = cookies().get('theme')?.value === 'dark'
+function useMounted() {
+  const [mounted, setMounted] = useState(false)
 
-  const changeTheme = async () => {
-    'use server'
-    cookies().set('theme', isThemeDark ? 'light' : 'dark')
-  }
+  useLayoutEffect(() => {
+    setMounted(true)
+  }, [])
+
+  return mounted
+}
+
+export function ThemeToggler() {
+  const mounted = useMounted()
+  const { theme, systemTheme, setTheme } = useTheme()
+
+  if (!mounted) return null
+
+  const isThemeDark = theme === 'system' ? systemTheme === 'dark' : theme === 'dark'
 
   return (
-    <form action={changeTheme}>
-      <button
-        type="submit"
-        className="ml-1 rounded-md p-2 text-slate-900 transition-colors hover:bg-slate-100 dark:text-white dark:hover:bg-slate-800"
-      >
-        {isThemeDark ? <IconSunDim className="h-6 w-6" /> : <IconMoonStar className="h-6 w-6" />}
-      </button>
-    </form>
+    <button
+      type="submit"
+      className="ml-1 rounded-md p-2 text-slate-900 transition-colors hover:bg-slate-100 dark:text-white dark:hover:bg-slate-800"
+      onClick={() => setTheme(isThemeDark ? 'light' : 'dark')}
+    >
+      {isThemeDark ? <IconSunDim className="h-6 w-6" /> : <IconMoonStar className="h-6 w-6" />}
+    </button>
   )
 }
