@@ -1,4 +1,4 @@
-import { SVGProps } from 'react'
+import type { SVGProps } from 'react'
 
 // https://icones.js.org/collection/lucide
 export function IconArrowLeftRight(props: SVGProps<SVGSVGElement>) {
@@ -34,6 +34,21 @@ export function IconCoins(props: SVGProps<SVGSVGElement>) {
   )
 }
 
+export function IconMoonStar(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M12 3a6 6 0 0 0 9 9a9 9 0 1 1-9-9m7 0v4m2-2h-4"
+      ></path>
+    </svg>
+  )
+}
+
 export function IconPointerClick(props: SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}>
@@ -45,6 +60,23 @@ export function IconPointerClick(props: SVGProps<SVGSVGElement>) {
         strokeWidth="2"
         d="m9 9l5 12l1.8-5.2L21 14ZM7.2 2.2L8 5.1M5.1 8l-2.9-.8M14 4.1L12 6m-6 6l-1.9 2"
       ></path>
+    </svg>
+  )
+}
+
+export function IconSunDim(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      >
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 4h.01M20 12h.01M12 20h.01M4 12h.01m13.647-5.657h.01m-.01 11.314h.01m-11.324 0h.01m-.01-11.314h.01"></path>
+      </g>
     </svg>
   )
 }

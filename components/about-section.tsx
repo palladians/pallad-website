@@ -24,13 +24,16 @@ const tiles = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative bg-indigo-50 px-5 py-16 sm:px-8 sm:py-28">
+    <section
+      id="about"
+      className="relative border-t border-slate-100 bg-indigo-50 px-5 py-16 dark:border-slate-800 dark:bg-slate-900 sm:px-8 sm:py-28"
+    >
       <Image
         src={AboutHref}
         alt="Black and white abstract background with intersecting lines creating a mesmerizing pattern."
         className="absolute left-0 top-0 h-full w-full mix-blend-soft-light"
       />
-      <div className="container relative z-10 mx-auto leading-8 text-slate-900">
+      <div className="container relative z-10 mx-auto leading-8 text-slate-900 dark:text-white">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">
             Revolutionizing Payments and Finance with Cutting-edge Technology
@@ -46,13 +49,13 @@ export function AboutSection() {
           {tiles.map((tile) => (
             <div
               key={tile.title}
-              className="rounded-md border border-slate-100 bg-white/50 p-4 shadow backdrop-blur-sm"
+              className="rounded-md border border-slate-100 bg-white/50 p-4 shadow backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/50"
             >
               <div className="flex items-center space-x-2">
                 <tile.Icon className="h-6 w-6" />
                 <h3 className="text-lg font-semibold">{tile.title}</h3>
               </div>
-              <p className="mt-2 leading-7 text-slate-700">{tile.copy}</p>
+              <p className="mt-2 leading-7 text-slate-700 dark:text-slate-300">{tile.copy}</p>
             </div>
           ))}
         </div>

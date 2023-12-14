@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { IconDiscord, IconGithub, IconTwitter } from './icons'
+import { IconDiscord, IconGithub, IconTwitter } from '@/components/icons'
 
 const menu = [
   { link: '/', label: 'FAQ' },
@@ -15,7 +15,7 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white px-6 py-16 text-center text-slate-900 sm:px-8 sm:py-28">
+    <footer className="border-t border-slate-100 bg-white px-6 py-16 text-center text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:text-white sm:px-8 sm:py-28">
       <p>
         Pallad, proudly presented by{' '}
         <a
