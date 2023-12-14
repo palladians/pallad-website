@@ -37,7 +37,7 @@ export function Header() {
             <ul className="flex space-x-6 text-sm font-medium text-slate-500 dark:text-white">
               {menu.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="hover:text-slate-600">
+                  <Link href={item.href} className="light:hover:text-slate-600">
                     {item.label}
                   </Link>
                 </li>
