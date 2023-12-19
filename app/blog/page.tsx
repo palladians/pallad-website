@@ -20,7 +20,7 @@ export default async function Blog() {
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
               <article className="grid grid-cols-1 items-center gap-x-10 gap-y-4 md:grid-cols-2">
                 <Image
-                  src={`/covers/${post.slug}.jpeg`}
+                  src={`/covers/${post.slug}.jpg`}
                   alt={post.title}
                   width={360}
                   height={210}

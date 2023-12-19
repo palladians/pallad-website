@@ -24,7 +24,7 @@ export default function BlogPost({ params }: Props) {
     <main className="bg-white dark:bg-slate-950">
       <article className="mx-auto w-full max-w-3xl space-y-6 px-5 py-10 md:space-y-8 md:py-16">
         <Image
-          src={`/covers/${post.slug}.jpeg`}
+          src={`/covers/${post.slug}.jpg`}
           alt={post.title}
           width={768}
           height={400}
