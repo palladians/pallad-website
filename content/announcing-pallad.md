@@ -20,7 +20,7 @@ First, testing the wallet with the waitlist volunteers. Their feedback will be i
 ## What's in Pallad’s Beta version?
 Keeping it simple, the beta will allow you to make transactions and funds on Berkeley. There's a transaction history and an address book. That’s what you’ll see on the surface, under the hood there’s a few libraries that standardize how the wallet interacts with Mina, derives address, creates credentials, and manages keys.
 
-## Upcoming features — Short-Term
+## Upcoming features - Short-Term
 Web Provider RPC allowing zkApps to interact with Pallad (similar to EVM chains). Hardware wallets, most likely Ledger. Internationalization (starting with Turkish, of course ❤️). Protokit. Zeko. 
 
 ## Upcoming Features - Mid-Term
