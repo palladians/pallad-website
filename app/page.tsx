@@ -1,19 +1,21 @@
+import type { Metadata } from 'next'
+
 import { AboutSection } from '@/components/about-section'
-import { Footer } from '@/components/footer'
-import { Header } from '@/components/header'
 import { HeroSection } from '@/components/hero-section'
 import { TilesSection } from '@/components/tiles-section'
 import { WaitlistSection } from '@/components/waitlist-section'
 
+export const metadata: Metadata = {
+  title: 'Home - Pallad',
+}
+
 export default function Home() {
   return (
-    <>
-      <Header />
+    <main>
       <HeroSection />
       <TilesSection />
       <AboutSection />
       <WaitlistSection />
-      <Footer />
-    </>
+    </main>
   )
 }

@@ -3,8 +3,9 @@ import Link from 'next/link'
 import { IconDiscord, IconGithub, IconTwitter } from '@/components/icons'
 
 const menu = [
-  { link: '/', label: 'FAQ' },
-  { link: '/', label: 'Support' },
+  { href: '/', label: 'FAQ' },
+  { href: '/', label: 'Support' },
+  { href: '/blog', label: 'Blog' },
 ]
 
 const socials = [
@@ -32,7 +33,7 @@ export function Footer() {
         <ul className="flex justify-center space-x-6 text-sm font-medium sm:space-x-10">
           {menu.map((item) => (
             <li key={item.label}>
-              <Link href={item.link} className="block p-2 hover:underline">
+              <Link href={item.href} className="block p-2 hover:underline">
                 {item.label}
               </Link>
             </li>

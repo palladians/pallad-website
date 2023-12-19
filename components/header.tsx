@@ -8,6 +8,7 @@ import { ThemeToggler } from '@/components/theme-toggler'
 const menu = [
   { href: '/', label: 'FAQ' },
   { href: '/', label: 'Support' },
+  { href: '/blog', label: 'Blog' },
 ]
 
 const socials = [
@@ -37,7 +38,7 @@ export function Header() {
             <ul className="flex space-x-6 text-sm font-medium text-slate-500 dark:text-white">
               {menu.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="light:hover:text-slate-600">
+                  <Link href={item.href} className="hover:text-slate-600 dark:hover:text-white">
                     {item.label}
                   </Link>
                 </li>
