@@ -40,7 +40,7 @@ export default function BlogPost({ params }: Props) {
           {post.title}
         </h1>
         <div
-          className="prose prose-slate dark:prose-invert max-w-none"
+          className="prose prose-slate max-w-none dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </article>
