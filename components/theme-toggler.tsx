@@ -26,6 +26,7 @@ export function ThemeToggler() {
   return (
     <button
       type="submit"
+      aria-label={isThemeDark ? 'Switch to light mode' : 'Switch to dark mode'}
       className="ml-1 rounded-md p-2 text-slate-900 transition-colors hover:bg-slate-100 dark:text-white dark:hover:bg-slate-800"
       onClick={() => setTheme(isThemeDark ? 'light' : 'dark')}
     >

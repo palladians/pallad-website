@@ -20,7 +20,7 @@ export default async function Blog() {
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
               <article className="grid grid-cols-1 items-center gap-x-10 gap-y-4 md:grid-cols-2">
                 <Image
-                  src={`/covers/${post.slug}.jpg`}
+                  src={`/covers/${post.slug}.webp`}
                   alt={post.title}
                   width={360}
                   height={210}
@@ -29,9 +29,9 @@ export default async function Blog() {
                 <div>
                   <p className="flex items-center space-x-2 font-medium text-slate-700 dark:text-slate-400">
                     <span>{`${post.readingTime} ${post.readingTime > 1 ? 'mins' : 'min'}`}</span>
-                    <span className="block h-2 w-2 rounded-full bg-blue-600" />
+                    <span className="block h-2 w-2 rounded-full bg-blue-500" />
                     <span>{post.author}</span>
-                    <span className="font-semibold text-blue-600">{post.publishedAt}</span>
+                    <span className="font-semibold text-blue-500">{post.publishedAt}</span>
                   </p>
                   <h3 className="mt-1 text-xl font-medium leading-8 text-slate-900 dark:text-white md:mt-2 md:text-2xl md:leading-10">
                     {post.title}
