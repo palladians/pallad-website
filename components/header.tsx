@@ -12,7 +12,7 @@ const menu = [
 ]
 
 const socials = [
-  { href: 'https://twitter.com/pallad_xyz', label: 'Twitter', Icon: IconTwitter },
+  { href: 'https://twitter.com/palladHQ', label: 'Twitter', Icon: IconTwitter },
   { href: 'https://github.com/palladians/pallad', label: 'GitHub', Icon: IconGithub },
   { href: 'https://discord.com/invite/ExzzfTGUnB', label: 'Discord', Icon: IconDiscord },
 ]
