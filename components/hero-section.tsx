@@ -26,12 +26,6 @@ export function HeroSection() {
         </p>
         <div className="mt-8 items-center justify-center space-x-0 space-y-3 sm:flex sm:space-x-4 sm:space-y-0">
           <Link
-            href="/#waitlist"
-            className="block rounded-md bg-slate-800 px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
-          >
-            Join Waitlist
-          </Link>
-          <Link
             href="/#about"
             className="block rounded-md border border-slate-200 bg-white px-8 py-3 text-sm font-medium text-slate-900 transition-colors hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
           >
